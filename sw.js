@@ -1,6 +1,6 @@
 // Offline cache. Stale-while-revalidate: the app opens instantly from cache and
 // picks up new files (e.g. an edited word list) on the next launch.
-const CACHE = 'sbt-v2';
+const CACHE = 'sbt-v3';
 const FILES = [
   './',
   'index.html',

@@ -61,8 +61,9 @@ export function speak(text, rate = 0.85) {
   });
 }
 
-// Letter names as a British voice should say them.
-const SAY_LETTER = { a: 'A', z: 'zed' };
+// Letter names as a British voice should say them. Lower case on purpose:
+// iOS reads a single capital as "capital E". A lone "a" can sound like "uh".
+const SAY_LETTER = { a: 'ay', z: 'zed' };
 
 /** Say a word letter by letter. `onLetter(i)` lets the UI highlight each letter. */
 export async function spellOut(word, rate = 0.6, onLetter = () => {}, isCancelled = () => false) {
@@ -72,7 +73,7 @@ export async function spellOut(word, rate = 0.6, onLetter = () => {}, isCancelle
     const ch = chars[i].toLowerCase();
     onLetter(i);
     if (ch === ' ') { await pause(350); continue; }
-    await speak(SAY_LETTER[ch] || ch.toUpperCase(), rate);
+    await speak(SAY_LETTER[ch] || ch, rate);
     await pause(120);
   }
   onLetter(-1);
