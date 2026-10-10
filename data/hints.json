@@ -1,0 +1,1930 @@
+{
+ "above": {
+  "meaning": "Higher than something.",
+  "sentence": "The bird is flying above the trees."
+ },
+ "accident": {
+  "meaning": "Something bad that happens when nobody planned it.",
+  "sentence": "He broke the glass by accident."
+ },
+ "actor": {
+  "meaning": "A man or boy who plays a part in a film or play.",
+  "sentence": "The actor waved to his fans."
+ },
+ "actress": {
+  "meaning": "A woman or girl who plays a part in a film or play.",
+  "sentence": "The actress won a big prize."
+ },
+ "address": {
+  "meaning": "The number and street where you live.",
+  "sentence": "Please write your address on the letter."
+ },
+ "afraid": {
+  "meaning": "Feeling scared.",
+  "sentence": "My little sister is afraid of the dark."
+ },
+ "after": {
+  "meaning": "Later than something.",
+  "sentence": "We play football after school."
+ },
+ "afternoon": {
+  "meaning": "The part of the day between lunch and evening.",
+  "sentence": "We went to the park in the afternoon."
+ },
+ "again": {
+  "meaning": "One more time.",
+  "sentence": "Can you say that again, please?"
+ },
+ "agree": {
+  "meaning": "To think the same as someone else.",
+  "sentence": "I agree with you, pizza is the best."
+ },
+ "airport": {
+  "meaning": "A place where planes take off and land.",
+  "sentence": "We took a taxi to the airport."
+ },
+ "alarm": {
+  "meaning": "A loud sound that wakes you up or warns you.",
+  "sentence": "My alarm rings at seven o'clock."
+ },
+ "always": {
+  "meaning": "Every time; at all times.",
+  "sentence": "She always brushes her teeth before bed."
+ },
+ "animal": {
+  "meaning": "A living thing that can move, like a dog or a fish.",
+  "sentence": "The elephant is my favourite animal."
+ },
+ "answer": {
+  "meaning": "What you say or write back to a question.",
+  "sentence": "I know the answer to this question."
+ },
+ "apartment": {
+  "meaning": "A home with rooms on one floor of a big building.",
+  "sentence": "They live in an apartment on the fifth floor."
+ },
+ "apple": {
+  "meaning": "A round red or green fruit.",
+  "sentence": "I eat an apple every day."
+ },
+ "armchair": {
+  "meaning": "A soft chair with places to rest your arms.",
+  "sentence": "Grandpa is sleeping in his armchair."
+ },
+ "around": {
+  "meaning": "On every side; in a circle.",
+  "sentence": "We walked around the lake."
+ },
+ "arrive": {
+  "meaning": "To get to a place.",
+  "sentence": "The train will arrive at ten."
+ },
+ "artist": {
+  "meaning": "A person who paints or draws pictures.",
+  "sentence": "The artist painted a beautiful picture of the sea."
+ },
+ "aunt": {
+  "meaning": "The sister of your mum or dad.",
+  "sentence": "My aunt lives in London."
+ },
+ "autumn": {
+  "meaning": "The season after summer, when leaves fall.",
+  "sentence": "The leaves turn yellow in autumn."
+ },
+ "back": {
+  "meaning": "The part of your body behind you; or to return.",
+  "sentence": "Come back home before dark."
+ },
+ "badly": {
+  "meaning": "In a bad way; not well.",
+  "sentence": "He played badly in the match."
+ },
+ "balloon": {
+  "meaning": "A colourful rubber bag you fill with air.",
+  "sentence": "The red balloon flew into the sky."
+ },
+ "banana": {
+  "meaning": "A long yellow fruit.",
+  "sentence": "Monkeys love to eat a banana."
+ },
+ "band": {
+  "meaning": "A group of people who play music together.",
+  "sentence": "My brother plays the drums in a band."
+ },
+ "bank": {
+  "meaning": "A place where people keep their money.",
+  "sentence": "Mum went to the bank to get some money."
+ },
+ "baseball": {
+  "meaning": "A game where you hit a ball with a bat and run.",
+  "sentence": "They play baseball in America."
+ },
+ "basketball": {
+  "meaning": "A game where you throw a ball into a high net.",
+  "sentence": "He is very tall and good at basketball."
+ },
+ "bathroom": {
+  "meaning": "A room where you wash and have a bath.",
+  "sentence": "The bathroom is next to my bedroom."
+ },
+ "bean": {
+  "meaning": "A small seed you can cook and eat.",
+  "sentence": "I like beans on toast."
+ },
+ "bear": {
+  "meaning": "A big wild animal with thick fur.",
+  "sentence": "The brown bear caught a fish."
+ },
+ "beautiful": {
+  "meaning": "Very nice to look at.",
+  "sentence": "What a beautiful flower!"
+ },
+ "bedroom": {
+  "meaning": "A room where you sleep.",
+  "sentence": "My bedroom has blue walls."
+ },
+ "before": {
+  "meaning": "Earlier than something.",
+  "sentence": "Wash your hands before dinner."
+ },
+ "behind": {
+  "meaning": "At the back of something.",
+  "sentence": "The cat is hiding behind the sofa."
+ },
+ "below": {
+  "meaning": "Lower than something.",
+  "sentence": "Write your name below the picture."
+ },
+ "best": {
+  "meaning": "Better than all the others.",
+  "sentence": "She is my best friend."
+ },
+ "better": {
+  "meaning": "More good than something else.",
+  "sentence": "I feel better today."
+ },
+ "between": {
+  "meaning": "In the middle of two things.",
+  "sentence": "The ball is between the two chairs."
+ },
+ "bird": {
+  "meaning": "An animal with feathers and wings.",
+  "sentence": "A little bird is singing in the tree."
+ },
+ "birthday": {
+  "meaning": "The day of the year you were born.",
+  "sentence": "Happy birthday to you!"
+ },
+ "black": {
+  "meaning": "The darkest colour, like the night sky.",
+  "sentence": "My cat is black."
+ },
+ "blanket": {
+  "meaning": "A big warm cover for your bed.",
+  "sentence": "I sleep under a warm blanket."
+ },
+ "blind": {
+  "meaning": "Not able to see.",
+  "sentence": "The blind man has a guide dog."
+ },
+ "block": {
+  "meaning": "A solid piece of something, like wood or ice.",
+  "sentence": "The baby is playing with a toy block."
+ },
+ "blood": {
+  "meaning": "The red liquid inside your body.",
+  "sentence": "I cut my finger and saw blood."
+ },
+ "blue": {
+  "meaning": "The colour of the sky on a sunny day.",
+  "sentence": "The sea is blue today."
+ },
+ "board": {
+  "meaning": "A flat piece of wood or a surface you write on.",
+  "sentence": "The teacher wrote on the board."
+ },
+ "boat": {
+  "meaning": "Something that carries people on water.",
+  "sentence": "We sailed across the lake in a boat."
+ },
+ "body": {
+  "meaning": "All of a person or animal.",
+  "sentence": "Exercise is good for your body."
+ },
+ "book": {
+  "meaning": "Pages with words that you read.",
+  "sentence": "I am reading a book about dragons."
+ },
+ "bookcase": {
+  "meaning": "Furniture with shelves for books.",
+  "sentence": "The bookcase is full of stories."
+ },
+ "bookshop": {
+  "meaning": "A shop that sells books.",
+  "sentence": "We bought a new dictionary at the bookshop."
+ },
+ "bored": {
+  "meaning": "Not interested; with nothing fun to do.",
+  "sentence": "I am bored, let's play a game."
+ },
+ "bottle": {
+  "meaning": "A glass or plastic container for drinks.",
+  "sentence": "Take a bottle of water with you."
+ },
+ "bottom": {
+  "meaning": "The lowest part of something.",
+  "sentence": "The coin is at the bottom of the pool."
+ },
+ "bread": {
+  "meaning": "Food made from flour that you bake.",
+  "sentence": "Mum bought fresh bread for breakfast."
+ },
+ "breakfast": {
+  "meaning": "The first meal of the day.",
+  "sentence": "I have cereal for breakfast."
+ },
+ "brilliant": {
+  "meaning": "Very, very good; also very bright.",
+  "sentence": "That is a brilliant idea!"
+ },
+ "brother": {
+  "meaning": "A boy who has the same parents as you.",
+  "sentence": "My brother is two years older than me."
+ },
+ "brown": {
+  "meaning": "The colour of chocolate or wood.",
+  "sentence": "The dog has brown eyes."
+ },
+ "brush": {
+  "meaning": "A tool with hairs for cleaning or painting.",
+  "sentence": "Use a brush to paint the fence."
+ },
+ "building": {
+  "meaning": "A house, school or other place with walls and a roof.",
+  "sentence": "That building is very tall."
+ },
+ "busy": {
+  "meaning": "Having a lot to do.",
+  "sentence": "Dad is busy at work today."
+ },
+ "butter": {
+  "meaning": "Soft yellow food made from milk.",
+  "sentence": "Put some butter on your toast."
+ },
+ "button": {
+  "meaning": "A small round thing on clothes; or something you press.",
+  "sentence": "Press the green button to start."
+ },
+ "cake": {
+  "meaning": "A sweet baked food, often for parties.",
+  "sentence": "We had chocolate cake at the party."
+ },
+ "camera": {
+  "meaning": "A machine for taking photos.",
+  "sentence": "Smile at the camera!"
+ },
+ "card": {
+  "meaning": "A piece of thick paper, often with a picture and a message.",
+  "sentence": "I made a birthday card for Mum."
+ },
+ "carrot": {
+  "meaning": "A long orange vegetable.",
+  "sentence": "Rabbits love to eat a carrot."
+ },
+ "castle": {
+  "meaning": "A big old building with strong walls and towers.",
+  "sentence": "The king lived in a castle."
+ },
+ "catch": {
+  "meaning": "To take something that is moving in your hands.",
+  "sentence": "Can you catch the ball?"
+ },
+ "chair": {
+  "meaning": "Something you sit on.",
+  "sentence": "Please sit on this chair."
+ },
+ "chalk": {
+  "meaning": "A white stick you use to write on a board.",
+  "sentence": "The teacher writes with chalk."
+ },
+ "cheese": {
+  "meaning": "Food made from milk, often yellow.",
+  "sentence": "Mice like cheese."
+ },
+ "chicken": {
+  "meaning": "A farm bird; also its meat.",
+  "sentence": "We had chicken and rice for dinner."
+ },
+ "child": {
+  "meaning": "A young boy or girl.",
+  "sentence": "Every child in the class has a book."
+ },
+ "children": {
+  "meaning": "More than one child.",
+  "sentence": "The children are playing in the playground."
+ },
+ "chocolate": {
+  "meaning": "A sweet brown food made from cocoa.",
+  "sentence": "I love hot chocolate in winter."
+ },
+ "cinema": {
+  "meaning": "A place where you watch films on a big screen.",
+  "sentence": "We went to the cinema on Saturday."
+ },
+ "city": {
+  "meaning": "A big town with lots of people.",
+  "sentence": "Lviv is a beautiful city."
+ },
+ "class": {
+  "meaning": "A group of students who learn together.",
+  "sentence": "There are twenty-five pupils in my class."
+ },
+ "classroom": {
+  "meaning": "A room where students have lessons.",
+  "sentence": "Our classroom has big windows."
+ },
+ "climb": {
+  "meaning": "To go up using your hands and feet.",
+  "sentence": "The cat can climb the tree."
+ },
+ "clock": {
+  "meaning": "A thing on the wall that shows the time.",
+  "sentence": "The clock says three o'clock."
+ },
+ "close": {
+  "meaning": "To shut.",
+  "sentence": "Please close the door."
+ },
+ "coat": {
+  "meaning": "Warm clothes you wear over other clothes.",
+  "sentence": "Put on your coat, it's cold."
+ },
+ "cold": {
+  "meaning": "Not warm; also an illness with a runny nose.",
+  "sentence": "The water is very cold."
+ },
+ "colour": {
+  "meaning": "Red, blue and green are examples.",
+  "sentence": "What colour is your bike?"
+ },
+ "comb": {
+  "meaning": "A thing with thin teeth to make your hair tidy.",
+  "sentence": "Use a comb to tidy your hair."
+ },
+ "cook": {
+  "meaning": "To make food hot and ready to eat.",
+  "sentence": "My dad likes to cook pasta."
+ },
+ "copy": {
+  "meaning": "To do or write the same thing again.",
+  "sentence": "Copy the words from the board."
+ },
+ "corner": {
+  "meaning": "The place where two walls or streets meet.",
+  "sentence": "The shop is on the corner."
+ },
+ "correct": {
+  "meaning": "Right; without mistakes.",
+  "sentence": "Your answer is correct!"
+ },
+ "cost": {
+  "meaning": "How much money you pay for something.",
+  "sentence": "How much does this book cost?"
+ },
+ "could": {
+  "meaning": "Was able to.",
+  "sentence": "I could swim when I was five."
+ },
+ "country": {
+  "meaning": "A land with its own people and flag, like Ukraine.",
+  "sentence": "Ukraine is a big country."
+ },
+ "cousin": {
+  "meaning": "The child of your aunt or uncle.",
+  "sentence": "My cousin is coming to visit."
+ },
+ "cupboard": {
+  "meaning": "A small cabinet with a door for keeping things.",
+  "sentence": "The cups are in the cupboard."
+ },
+ "curtain": {
+  "meaning": "Cloth that hangs over a window.",
+  "sentence": "Close the curtain, it's too bright."
+ },
+ "dance": {
+  "meaning": "To move your body to music.",
+  "sentence": "Let's dance to this song!"
+ },
+ "dancer": {
+  "meaning": "A person who dances.",
+  "sentence": "She wants to be a dancer."
+ },
+ "dancing": {
+  "meaning": "Moving to music.",
+  "sentence": "We were dancing all night at the party."
+ },
+ "dangerous": {
+  "meaning": "Not safe; it could hurt you.",
+  "sentence": "It is dangerous to play on the road."
+ },
+ "dark": {
+  "meaning": "With little or no light.",
+  "sentence": "It gets dark early in winter."
+ },
+ "date": {
+  "meaning": "The day, month and year.",
+  "sentence": "What is the date today?"
+ },
+ "daughter": {
+  "meaning": "Someone's girl child.",
+  "sentence": "They have one son and one daughter."
+ },
+ "delicious": {
+  "meaning": "Tasting very good.",
+  "sentence": "This soup is delicious!"
+ },
+ "desk": {
+  "meaning": "A table where you work or study.",
+  "sentence": "My pencil is on the desk."
+ },
+ "dictionary": {
+  "meaning": "A book that tells you what words mean.",
+  "sentence": "Look up the word in a dictionary."
+ },
+ "dinner": {
+  "meaning": "The big meal in the evening.",
+  "sentence": "We have dinner at seven."
+ },
+ "doctor": {
+  "meaning": "A person who helps sick people get better.",
+  "sentence": "I went to the doctor because I was ill."
+ },
+ "doll": {
+  "meaning": "A toy that looks like a small person.",
+  "sentence": "My sister loves her doll."
+ },
+ "door": {
+  "meaning": "You open it to go into a room.",
+  "sentence": "Somebody is knocking at the door."
+ },
+ "down": {
+  "meaning": "To a lower place.",
+  "sentence": "Sit down, please."
+ },
+ "draw": {
+  "meaning": "To make a picture with a pencil.",
+  "sentence": "Can you draw a horse?"
+ },
+ "drawer": {
+  "meaning": "A box in furniture that slides in and out.",
+  "sentence": "My socks are in the top drawer."
+ },
+ "dress": {
+  "meaning": "Clothes for a girl or woman that cover the body and legs.",
+  "sentence": "She is wearing a red dress."
+ },
+ "drink": {
+  "meaning": "To take water or juice into your mouth and swallow.",
+  "sentence": "Drink some water after sport."
+ },
+ "drive": {
+  "meaning": "To make a car go.",
+  "sentence": "My mum can drive a bus."
+ },
+ "driver": {
+  "meaning": "A person who drives a car or bus.",
+  "sentence": "The bus driver said hello."
+ },
+ "duck": {
+  "meaning": "A water bird that says \"quack\".",
+  "sentence": "The duck is swimming in the pond."
+ },
+ "during": {
+  "meaning": "At the same time as something.",
+  "sentence": "Don't talk during the lesson."
+ },
+ "each": {
+  "meaning": "Every one.",
+  "sentence": "Each pupil has a book."
+ },
+ "early": {
+  "meaning": "Before the usual time.",
+  "sentence": "I get up early on Mondays."
+ },
+ "east": {
+  "meaning": "The direction where the sun comes up.",
+  "sentence": "The sun rises in the east."
+ },
+ "elephant": {
+  "meaning": "A very big grey animal with a long nose.",
+  "sentence": "The elephant has a long trunk."
+ },
+ "elevator": {
+  "meaning": "A machine that takes you up and down in a building (British: lift).",
+  "sentence": "We took the elevator to the tenth floor."
+ },
+ "email": {
+  "meaning": "A message you send on a computer.",
+  "sentence": "I sent an email to my teacher."
+ },
+ "engineer": {
+  "meaning": "A person who designs or builds machines, roads or bridges.",
+  "sentence": "My uncle is an engineer who builds bridges."
+ },
+ "enjoy": {
+  "meaning": "To like doing something.",
+  "sentence": "I enjoy reading comics."
+ },
+ "enormous": {
+  "meaning": "Very, very big.",
+  "sentence": "The dinosaur was enormous."
+ },
+ "enough": {
+  "meaning": "As much as you need.",
+  "sentence": "Do we have enough chairs for everyone?"
+ },
+ "enter": {
+  "meaning": "To go into a place.",
+  "sentence": "Please knock before you enter the room."
+ },
+ "envelope": {
+  "meaning": "A paper cover for a letter.",
+  "sentence": "Put the letter in the envelope."
+ },
+ "environment": {
+  "meaning": "The air, water and land around us.",
+  "sentence": "We must keep the environment clean."
+ },
+ "eraser": {
+  "meaning": "A small thing that rubs out pencil marks (British: rubber).",
+  "sentence": "Can I borrow your eraser?"
+ },
+ "evening": {
+  "meaning": "The time of day after the afternoon.",
+  "sentence": "We watch TV in the evening."
+ },
+ "every": {
+  "meaning": "All of them, one by one.",
+  "sentence": "I play football every day."
+ },
+ "everyone": {
+  "meaning": "All the people.",
+  "sentence": "Everyone in the class likes the new teacher."
+ },
+ "everything": {
+  "meaning": "All the things.",
+  "sentence": "Everything in the room is clean."
+ },
+ "example": {
+  "meaning": "Something that shows what you mean.",
+  "sentence": "Can you give me an example?"
+ },
+ "exit": {
+  "meaning": "The way out.",
+  "sentence": "The exit is at the back of the cinema."
+ },
+ "expensive": {
+  "meaning": "Costing a lot of money.",
+  "sentence": "This phone is very expensive."
+ },
+ "face": {
+  "meaning": "The front of your head with your eyes, nose and mouth.",
+  "sentence": "She has a happy face."
+ },
+ "factory": {
+  "meaning": "A building where people or machines make things.",
+  "sentence": "They make cars in this factory."
+ },
+ "family": {
+  "meaning": "Your parents, brothers, sisters and other relatives.",
+  "sentence": "My family is having dinner together."
+ },
+ "famous": {
+  "meaning": "Known by lots of people.",
+  "sentence": "He is a famous football player."
+ },
+ "farm": {
+  "meaning": "Land where people grow food and keep animals.",
+  "sentence": "There are cows and sheep on the farm."
+ },
+ "farmer": {
+  "meaning": "A person who works on a farm.",
+  "sentence": "The farmer is feeding the pigs."
+ },
+ "fast": {
+  "meaning": "Quick; moving at high speed.",
+  "sentence": "A cheetah can run very fast."
+ },
+ "father": {
+  "meaning": "Your dad.",
+  "sentence": "My father is a teacher."
+ },
+ "favourite": {
+  "meaning": "The one you like the most.",
+  "sentence": "Blue is my favourite colour."
+ },
+ "February": {
+  "meaning": "The second month of the year.",
+  "sentence": "My birthday is in February."
+ },
+ "feel": {
+  "meaning": "To know something by touching; or to have an emotion.",
+  "sentence": "I feel happy today."
+ },
+ "festival": {
+  "meaning": "A special event or celebration, often with music.",
+  "sentence": "We went to a music festival in the summer."
+ },
+ "field": {
+  "meaning": "An open piece of land with grass.",
+  "sentence": "The cows are in the field."
+ },
+ "fight": {
+  "meaning": "When people or animals hit each other.",
+  "sentence": "The two dogs started to fight."
+ },
+ "film": {
+  "meaning": "A story you watch on a screen; a movie.",
+  "sentence": "We watched a funny film last night."
+ },
+ "find": {
+  "meaning": "To see something you were looking for.",
+  "sentence": "I can't find my keys."
+ },
+ "finger": {
+  "meaning": "One of the five long parts at the end of your hand.",
+  "sentence": "She has a ring on her finger."
+ },
+ "finish": {
+  "meaning": "To end something.",
+  "sentence": "Finish your homework before you play."
+ },
+ "fire": {
+  "meaning": "Hot flames that burn.",
+  "sentence": "We sat around the fire and sang songs."
+ },
+ "first": {
+  "meaning": "Number one; before all the others.",
+  "sentence": "I was first in the race!"
+ },
+ "fish": {
+  "meaning": "An animal that lives and swims in water.",
+  "sentence": "There is a big fish in the river."
+ },
+ "flat": {
+  "meaning": "A home on one floor of a big building; also smooth and level.",
+  "sentence": "We live in a flat near the park."
+ },
+ "floor": {
+  "meaning": "The part of a room you walk on.",
+  "sentence": "Don't leave your toys on the floor."
+ },
+ "flower": {
+  "meaning": "The pretty, coloured part of a plant.",
+  "sentence": "She gave her mum a flower."
+ },
+ "food": {
+  "meaning": "Things that you eat.",
+  "sentence": "We need to buy some food."
+ },
+ "foot": {
+  "meaning": "The part of your body at the end of your leg.",
+  "sentence": "I hurt my foot playing football."
+ },
+ "football": {
+  "meaning": "A game where two teams kick a ball.",
+  "sentence": "Let's play football in the park."
+ },
+ "fork": {
+  "meaning": "A tool with points that you eat with.",
+  "sentence": "Eat your salad with a fork."
+ },
+ "free": {
+  "meaning": "Not costing any money; or able to do what you want.",
+  "sentence": "The museum is free on Sundays."
+ },
+ "friend": {
+  "meaning": "A person you like and who likes you.",
+  "sentence": "Tom is my best friend."
+ },
+ "from": {
+  "meaning": "Shows where something starts.",
+  "sentence": "I am from Ukraine."
+ },
+ "front": {
+  "meaning": "The part that faces forward.",
+  "sentence": "Sit at the front of the class."
+ },
+ "fruit": {
+  "meaning": "Sweet food from plants, like apples and oranges.",
+  "sentence": "Fruit is good for you."
+ },
+ "funny": {
+  "meaning": "Making you laugh.",
+  "sentence": "That joke is really funny!"
+ },
+ "game": {
+  "meaning": "Something you play for fun.",
+  "sentence": "Let's play a board game."
+ },
+ "garden": {
+  "meaning": "Land next to a house where flowers and plants grow.",
+  "sentence": "Grandma grows tomatoes in her garden."
+ },
+ "girl": {
+  "meaning": "A female child.",
+  "sentence": "The girl is riding a bike."
+ },
+ "glasses": {
+  "meaning": "Two pieces of glass you wear in front of your eyes to see better.",
+  "sentence": "Grandpa wears glasses to read."
+ },
+ "goat": {
+  "meaning": "A farm animal with horns that gives milk.",
+  "sentence": "The goat is eating grass."
+ },
+ "good": {
+  "meaning": "Nice; of high quality.",
+  "sentence": "You did a good job!"
+ },
+ "goodbye": {
+  "meaning": "What you say when you leave.",
+  "sentence": "Say goodbye to your friends."
+ },
+ "granddad": {
+  "meaning": "Your grandfather.",
+  "sentence": "My granddad tells great stories."
+ },
+ "grandfather": {
+  "meaning": "The father of your mum or dad.",
+  "sentence": "My grandfather is eighty years old."
+ },
+ "grandma": {
+  "meaning": "Your grandmother.",
+  "sentence": "Grandma makes the best cakes."
+ },
+ "grandmother": {
+  "meaning": "The mother of your mum or dad.",
+  "sentence": "My grandmother lives in a village."
+ },
+ "green": {
+  "meaning": "The colour of grass and leaves.",
+  "sentence": "The traffic light is green, let's go."
+ },
+ "grey": {
+  "meaning": "The colour between black and white, like a cloudy sky.",
+  "sentence": "The sky is grey today."
+ },
+ "ground": {
+  "meaning": "The surface of the earth that you walk on.",
+  "sentence": "The apple fell to the ground."
+ },
+ "group": {
+  "meaning": "A number of people or things together.",
+  "sentence": "We worked in a group of four."
+ },
+ "guitar": {
+  "meaning": "A musical instrument with strings.",
+  "sentence": "My brother plays the guitar."
+ },
+ "hair": {
+  "meaning": "What grows on your head.",
+  "sentence": "She has long brown hair."
+ },
+ "half": {
+  "meaning": "One of two equal parts.",
+  "sentence": "I ate half of the pizza."
+ },
+ "hall": {
+  "meaning": "A big room for meetings, or the area by the front door.",
+  "sentence": "We had a concert in the school hall."
+ },
+ "hand": {
+  "meaning": "The part of your body at the end of your arm.",
+  "sentence": "Raise your hand if you know the answer."
+ },
+ "happy": {
+  "meaning": "Feeling good and glad.",
+  "sentence": "I am happy to see you."
+ },
+ "hard": {
+  "meaning": "Not soft; or difficult.",
+  "sentence": "This maths problem is hard."
+ },
+ "have": {
+  "meaning": "To own or hold something.",
+  "sentence": "I have two cats."
+ },
+ "head": {
+  "meaning": "The top part of your body with your eyes and brain.",
+  "sentence": "Put a hat on your head."
+ },
+ "health": {
+  "meaning": "How well your body and mind are.",
+  "sentence": "Fruit and sport are good for your health."
+ },
+ "hear": {
+  "meaning": "To notice sounds with your ears.",
+  "sentence": "Can you hear the music?"
+ },
+ "hello": {
+  "meaning": "What you say when you meet someone.",
+  "sentence": "Hello, how are you?"
+ },
+ "help": {
+  "meaning": "To make something easier for someone.",
+  "sentence": "Can you help me carry this bag?"
+ },
+ "here": {
+  "meaning": "In this place.",
+  "sentence": "Come here, please."
+ },
+ "high": {
+  "meaning": "Far above the ground; tall.",
+  "sentence": "The mountain is very high."
+ },
+ "hippo": {
+  "meaning": "A very big African animal that likes to stay in rivers.",
+  "sentence": "The hippo is swimming in the river."
+ },
+ "history": {
+  "meaning": "The study of things that happened long ago.",
+  "sentence": "We learn about kings in history lessons."
+ },
+ "holiday": {
+  "meaning": "Time when you don't go to school or work.",
+  "sentence": "We went to the sea on holiday."
+ },
+ "home": {
+  "meaning": "The place where you live.",
+  "sentence": "Let's go home."
+ },
+ "homework": {
+  "meaning": "School work you do at home.",
+  "sentence": "I do my homework after lunch."
+ },
+ "horse": {
+  "meaning": "A big animal that people can ride.",
+  "sentence": "She rides a horse every weekend."
+ },
+ "hospital": {
+  "meaning": "A place where doctors look after sick people.",
+  "sentence": "The ambulance took him to hospital."
+ },
+ "house": {
+  "meaning": "A building where people live.",
+  "sentence": "They live in a big white house."
+ },
+ "hungry": {
+  "meaning": "Wanting to eat.",
+  "sentence": "I'm hungry, what's for dinner?"
+ },
+ "ice cream": {
+  "meaning": "A very cold sweet food.",
+  "sentence": "I want strawberry ice cream."
+ },
+ "idea": {
+  "meaning": "A new thought or plan.",
+  "sentence": "I have a great idea!"
+ },
+ "important": {
+  "meaning": "Mattering a lot.",
+  "sentence": "It is important to wash your hands."
+ },
+ "inside": {
+  "meaning": "In something; indoors.",
+  "sentence": "It's raining, let's play inside."
+ },
+ "interesting": {
+  "meaning": "Making you want to know more.",
+  "sentence": "This book is very interesting."
+ },
+ "internet": {
+  "meaning": "A network that connects computers around the world.",
+  "sentence": "I found the answer on the internet."
+ },
+ "into": {
+  "meaning": "To the inside of something.",
+  "sentence": "The cat jumped into the box."
+ },
+ "island": {
+  "meaning": "Land with water all around it.",
+  "sentence": "They live on a small island."
+ },
+ "jacket": {
+  "meaning": "A short coat.",
+  "sentence": "Take your jacket, it's windy."
+ },
+ "January": {
+  "meaning": "The first month of the year.",
+  "sentence": "It often snows in January."
+ },
+ "jeans": {
+  "meaning": "Trousers made of strong blue cloth.",
+  "sentence": "He is wearing jeans and a T-shirt."
+ },
+ "juice": {
+  "meaning": "A drink made from fruit.",
+  "sentence": "Can I have some orange juice?"
+ },
+ "jump": {
+  "meaning": "To push yourself up into the air with your legs.",
+  "sentence": "Frogs can jump very high."
+ },
+ "jungle": {
+  "meaning": "A thick, hot forest.",
+  "sentence": "Tigers live in the jungle."
+ },
+ "kangaroo": {
+  "meaning": "An Australian animal that jumps and carries its baby in a pocket.",
+  "sentence": "The kangaroo has a baby in its pouch."
+ },
+ "kitchen": {
+  "meaning": "The room where you cook.",
+  "sentence": "Mum is making soup in the kitchen."
+ },
+ "kite": {
+  "meaning": "A toy that flies in the wind on a long string.",
+  "sentence": "We flew a kite on the beach."
+ },
+ "know": {
+  "meaning": "To have information in your head.",
+  "sentence": "I know all the planets."
+ },
+ "lake": {
+  "meaning": "A big area of water with land all around it.",
+  "sentence": "We swam in the lake."
+ },
+ "lamp": {
+  "meaning": "Something that gives light.",
+  "sentence": "Turn on the lamp, please."
+ },
+ "last": {
+  "meaning": "At the end; after all the others.",
+  "sentence": "He was last in the race."
+ },
+ "late": {
+  "meaning": "After the right time.",
+  "sentence": "Hurry up, we're late!"
+ },
+ "later": {
+  "meaning": "After some time.",
+  "sentence": "See you later!"
+ },
+ "laugh": {
+  "meaning": "The sound you make when something is funny.",
+  "sentence": "The clown made everyone laugh."
+ },
+ "leave": {
+  "meaning": "To go away from a place.",
+  "sentence": "We leave school at three o'clock."
+ },
+ "letter": {
+  "meaning": "A written message you send by post; also A, B or C.",
+  "sentence": "I wrote a letter to my grandma."
+ },
+ "library": {
+  "meaning": "A place where you can borrow books.",
+  "sentence": "I borrowed this book from the library."
+ },
+ "like": {
+  "meaning": "To enjoy or think something is nice.",
+  "sentence": "I like ice cream."
+ },
+ "line": {
+  "meaning": "A long thin mark.",
+  "sentence": "Draw a straight line."
+ },
+ "listen": {
+  "meaning": "To pay attention to sounds.",
+  "sentence": "Listen to the teacher, please."
+ },
+ "little": {
+  "meaning": "Small.",
+  "sentence": "The little puppy is sleeping."
+ },
+ "live": {
+  "meaning": "To have your home in a place.",
+  "sentence": "I live in Lviv."
+ },
+ "lizard": {
+  "meaning": "A small animal with four legs, a long tail and scaly skin.",
+  "sentence": "A lizard is sitting on the warm rock."
+ },
+ "long": {
+  "meaning": "Not short; going far from end to end.",
+  "sentence": "The giraffe has a long neck."
+ },
+ "look": {
+  "meaning": "To turn your eyes towards something.",
+  "sentence": "Look at the rainbow!"
+ },
+ "lunch": {
+  "meaning": "The meal in the middle of the day.",
+  "sentence": "We have lunch at school."
+ },
+ "magazine": {
+  "meaning": "A thin book with pictures and stories that comes out every week or month.",
+  "sentence": "I read a magazine about animals."
+ },
+ "main": {
+  "meaning": "The most important.",
+  "sentence": "The main road goes through the town."
+ },
+ "make": {
+  "meaning": "To build or create something.",
+  "sentence": "Let's make a cake."
+ },
+ "many": {
+  "meaning": "A lot of.",
+  "sentence": "There are many stars in the sky."
+ },
+ "market": {
+  "meaning": "A place where people buy and sell food and other things.",
+  "sentence": "We buy vegetables at the market."
+ },
+ "match": {
+  "meaning": "A game between two teams; or a small stick that makes fire.",
+  "sentence": "We won the football match!"
+ },
+ "maths": {
+  "meaning": "The school subject about numbers.",
+  "sentence": "Maths is my favourite subject."
+ },
+ "meal": {
+  "meaning": "Food you eat at one time, like breakfast or dinner.",
+  "sentence": "Dinner is my favourite meal."
+ },
+ "meat": {
+  "meaning": "Food from animals, like chicken or beef.",
+  "sentence": "My cat loves meat."
+ },
+ "mechanic": {
+  "meaning": "A person who repairs cars and machines.",
+  "sentence": "The mechanic fixed our car."
+ },
+ "medicine": {
+  "meaning": "Something you take to get better when you are ill.",
+  "sentence": "Take this medicine twice a day."
+ },
+ "meet": {
+  "meaning": "To come together with someone.",
+  "sentence": "Let's meet at the park."
+ },
+ "member": {
+  "meaning": "A person who belongs to a group or club.",
+  "sentence": "I am a member of the chess club."
+ },
+ "message": {
+  "meaning": "Words you send to someone.",
+  "sentence": "I sent Dad a message."
+ },
+ "middle": {
+  "meaning": "The centre; between the beginning and the end.",
+  "sentence": "Stand in the middle of the room."
+ },
+ "milk": {
+  "meaning": "A white drink that comes from cows.",
+  "sentence": "I drink a glass of milk every morning."
+ },
+ "mirror": {
+  "meaning": "Glass where you can see yourself.",
+  "sentence": "She looked in the mirror."
+ },
+ "monkey": {
+  "meaning": "A clever animal with a long tail that climbs trees.",
+  "sentence": "The monkey is eating a banana."
+ },
+ "month": {
+  "meaning": "One of the twelve parts of a year, like May.",
+  "sentence": "My birthday is next month."
+ },
+ "morning": {
+  "meaning": "The early part of the day.",
+  "sentence": "I go to school in the morning."
+ },
+ "mouse": {
+  "meaning": "A small animal with a long tail; also the thing you move to use a computer.",
+  "sentence": "The cat is chasing a mouse."
+ },
+ "mouth": {
+  "meaning": "The part of your face you eat and talk with.",
+  "sentence": "Open your mouth and say \"ah\"."
+ },
+ "move": {
+  "meaning": "To go from one place to another.",
+  "sentence": "Don't move, I'm taking a photo!"
+ },
+ "movie": {
+  "meaning": "A film.",
+  "sentence": "We watched a movie about space."
+ },
+ "much": {
+  "meaning": "A lot of.",
+  "sentence": "How much water do you drink?"
+ },
+ "music": {
+  "meaning": "Sounds made by singing or playing instruments.",
+  "sentence": "I listen to music every day."
+ },
+ "must": {
+  "meaning": "Have to.",
+  "sentence": "You must wear a helmet when you ride a bike."
+ },
+ "name": {
+  "meaning": "What someone or something is called.",
+  "sentence": "My name is on my book."
+ },
+ "near": {
+  "meaning": "Not far away.",
+  "sentence": "The school is near my house."
+ },
+ "neck": {
+  "meaning": "The part of your body between your head and shoulders.",
+  "sentence": "A giraffe has a very long neck."
+ },
+ "need": {
+  "meaning": "To have to have something.",
+  "sentence": "Plants need water."
+ },
+ "never": {
+  "meaning": "Not ever; at no time.",
+  "sentence": "I never eat fish."
+ },
+ "next": {
+  "meaning": "Coming straight after.",
+  "sentence": "See you next week!"
+ },
+ "nice": {
+  "meaning": "Pleasant; good.",
+  "sentence": "Have a nice day!"
+ },
+ "night": {
+  "meaning": "The dark time when people sleep.",
+  "sentence": "The stars come out at night."
+ },
+ "noisy": {
+  "meaning": "Making a lot of sound.",
+  "sentence": "The classroom is very noisy today."
+ },
+ "north": {
+  "meaning": "The direction that is up on a map.",
+  "sentence": "It is cold in the north."
+ },
+ "nothing": {
+  "meaning": "Not anything.",
+  "sentence": "There is nothing in the box."
+ },
+ "notice": {
+  "meaning": "To see something; or a sign with information.",
+  "sentence": "Did you notice his new haircut?"
+ },
+ "number": {
+  "meaning": "One, two and three are examples; you use them to count.",
+  "sentence": "What is your phone number?"
+ },
+ "nurse": {
+  "meaning": "A person who looks after sick people in a hospital.",
+  "sentence": "The nurse gave me a plaster."
+ },
+ "often": {
+  "meaning": "Many times.",
+  "sentence": "I often visit my grandma."
+ },
+ "only": {
+  "meaning": "Just one; no more than.",
+  "sentence": "I have only one brother."
+ },
+ "open": {
+  "meaning": "Not closed.",
+  "sentence": "The shop is open on Sunday."
+ },
+ "opposite": {
+  "meaning": "Completely different; or on the other side.",
+  "sentence": "Hot is the opposite of cold."
+ },
+ "orange": {
+  "meaning": "A round fruit; also the colour of that fruit.",
+  "sentence": "I eat an orange every morning."
+ },
+ "other": {
+  "meaning": "Different; not this one.",
+  "sentence": "Where is my other sock?"
+ },
+ "outside": {
+  "meaning": "Not inside a building.",
+  "sentence": "Let's play outside."
+ },
+ "over": {
+  "meaning": "Above; or finished.",
+  "sentence": "The plane flew over the city."
+ },
+ "own": {
+  "meaning": "To have something that belongs to you.",
+  "sentence": "I own a red bike."
+ },
+ "page": {
+  "meaning": "One side of a sheet of paper in a book.",
+  "sentence": "Open your books at page ten."
+ },
+ "paint": {
+  "meaning": "Coloured liquid for making pictures; or to make a picture with it.",
+  "sentence": "Let's paint a picture of the sea."
+ },
+ "paper": {
+  "meaning": "Thin material you write on.",
+  "sentence": "Write your name on the paper."
+ },
+ "park": {
+  "meaning": "A big area with grass and trees where people go to play.",
+  "sentence": "We play football in the park."
+ },
+ "party": {
+  "meaning": "A time when people meet to have fun.",
+  "sentence": "I'm having a birthday party on Saturday."
+ },
+ "pasta": {
+  "meaning": "Italian food made from flour, like spaghetti.",
+  "sentence": "We had pasta with tomato sauce."
+ },
+ "pencil": {
+  "meaning": "A thin stick you write and draw with.",
+  "sentence": "Can I borrow your pencil?"
+ },
+ "people": {
+  "meaning": "Men, women and children.",
+  "sentence": "There are lots of people at the concert."
+ },
+ "phone": {
+  "meaning": "Something you use to call people.",
+  "sentence": "My phone is ringing."
+ },
+ "photo": {
+  "meaning": "A picture you take with a camera.",
+  "sentence": "Let's take a photo!"
+ },
+ "picture": {
+  "meaning": "A drawing, painting or photo.",
+  "sentence": "She drew a picture of her cat."
+ },
+ "place": {
+  "meaning": "An area or a position.",
+  "sentence": "This is a nice place for a picnic."
+ },
+ "plant": {
+  "meaning": "A living thing that grows in the ground.",
+  "sentence": "Water the plant every day."
+ },
+ "plate": {
+  "meaning": "A flat dish you put food on.",
+  "sentence": "Put the cake on a plate."
+ },
+ "play": {
+  "meaning": "To have fun with games or toys.",
+  "sentence": "Let's play hide and seek."
+ },
+ "please": {
+  "meaning": "A polite word when you ask for something.",
+  "sentence": "Can I have some water, please?"
+ },
+ "pocket": {
+  "meaning": "A small bag sewn into your clothes.",
+  "sentence": "My keys are in my pocket."
+ },
+ "police": {
+  "meaning": "The people whose job is to keep everyone safe and catch criminals.",
+  "sentence": "Call the police!"
+ },
+ "pool": {
+  "meaning": "A place with water where you can swim.",
+  "sentence": "We swam in the pool."
+ },
+ "poor": {
+  "meaning": "Having very little money.",
+  "sentence": "The poor man had no shoes."
+ },
+ "post": {
+  "meaning": "Letters and parcels that are delivered.",
+  "sentence": "Has the post come yet?"
+ },
+ "potato": {
+  "meaning": "A vegetable that grows under the ground.",
+  "sentence": "I like baked potato with cheese."
+ },
+ "present": {
+  "meaning": "A gift.",
+  "sentence": "I got a present for my birthday."
+ },
+ "pretty": {
+  "meaning": "Nice to look at.",
+  "sentence": "What a pretty dress!"
+ },
+ "price": {
+  "meaning": "How much money something costs.",
+  "sentence": "What is the price of this bike?"
+ },
+ "problem": {
+  "meaning": "Something that is difficult or wrong.",
+  "sentence": "I can't solve this maths problem."
+ },
+ "public": {
+  "meaning": "For everyone to use.",
+  "sentence": "The library is a public building."
+ },
+ "push": {
+  "meaning": "To move something away from you.",
+  "sentence": "Push the door to open it."
+ },
+ "question": {
+  "meaning": "Something you ask.",
+  "sentence": "Can I ask a question?"
+ },
+ "quick": {
+  "meaning": "Fast.",
+  "sentence": "Be quick, the bus is coming!"
+ },
+ "quiet": {
+  "meaning": "Making very little noise.",
+  "sentence": "Be quiet, the baby is sleeping."
+ },
+ "rabbit": {
+  "meaning": "A small animal with long ears.",
+  "sentence": "The rabbit is eating a carrot."
+ },
+ "rain": {
+  "meaning": "Water that falls from clouds.",
+  "sentence": "Take an umbrella, it might rain."
+ },
+ "rainbow": {
+  "meaning": "Colours in the sky after rain.",
+  "sentence": "Look, there's a rainbow!"
+ },
+ "read": {
+  "meaning": "To look at words and understand them.",
+  "sentence": "I read a book every night."
+ },
+ "ready": {
+  "meaning": "Prepared to do something.",
+  "sentence": "Are you ready to go?"
+ },
+ "remember": {
+  "meaning": "To keep something in your mind.",
+  "sentence": "Remember to bring your homework."
+ },
+ "repair": {
+  "meaning": "To fix something that is broken.",
+  "sentence": "Dad will repair my bike."
+ },
+ "repeat": {
+  "meaning": "To say or do something again.",
+  "sentence": "Please repeat the question."
+ },
+ "restaurant": {
+  "meaning": "A place where you buy and eat meals.",
+  "sentence": "We had dinner at an Italian restaurant."
+ },
+ "ride": {
+  "meaning": "To sit on and control a bike or horse.",
+  "sentence": "I can ride a bike."
+ },
+ "right": {
+  "meaning": "Correct; or the opposite of left.",
+  "sentence": "Turn right at the corner."
+ },
+ "river": {
+  "meaning": "A long line of water that flows to the sea.",
+  "sentence": "We went fishing in the river."
+ },
+ "road": {
+  "meaning": "A wide way for cars.",
+  "sentence": "Look both ways before you cross the road."
+ },
+ "robot": {
+  "meaning": "A machine that can move and do jobs.",
+  "sentence": "The robot can clean the floor."
+ },
+ "rock": {
+  "meaning": "A hard piece of stone.",
+  "sentence": "He sat on a big rock."
+ },
+ "room": {
+  "meaning": "A part of a building with walls, like a kitchen.",
+  "sentence": "My room is very tidy."
+ },
+ "round": {
+  "meaning": "Shaped like a circle or a ball.",
+  "sentence": "The Earth is round."
+ },
+ "rubber": {
+  "meaning": "A small thing that rubs out pencil marks.",
+  "sentence": "I used my rubber to fix the mistake."
+ },
+ "salad": {
+  "meaning": "Cold vegetables mixed together.",
+  "sentence": "I had a tomato salad for lunch."
+ },
+ "same": {
+  "meaning": "Not different.",
+  "sentence": "We have the same shoes!"
+ },
+ "Saturday": {
+  "meaning": "The day after Friday.",
+  "sentence": "We go swimming on Saturday."
+ },
+ "school": {
+  "meaning": "A place where children learn.",
+  "sentence": "I walk to school every day."
+ },
+ "scissors": {
+  "meaning": "A tool with two blades for cutting paper.",
+  "sentence": "Cut the paper with scissors."
+ },
+ "second": {
+  "meaning": "Number two, after the first; also a very short time.",
+  "sentence": "I came second in the race."
+ },
+ "send": {
+  "meaning": "To make a letter or message go to someone.",
+  "sentence": "Send me a photo, please."
+ },
+ "September": {
+  "meaning": "The ninth month of the year, when school starts.",
+  "sentence": "School starts in September."
+ },
+ "seven": {
+  "meaning": "The number after six.",
+  "sentence": "A week has seven days."
+ },
+ "shop": {
+  "meaning": "A place where you buy things.",
+  "sentence": "I bought milk at the shop."
+ },
+ "short": {
+  "meaning": "Not long or not tall.",
+  "sentence": "My little brother is short."
+ },
+ "shorts": {
+  "meaning": "Short trousers.",
+  "sentence": "I wear shorts in summer."
+ },
+ "should": {
+  "meaning": "A word for what is good or right to do.",
+  "sentence": "You should eat more vegetables."
+ },
+ "show": {
+  "meaning": "To let someone see something.",
+  "sentence": "Show me your new toy!"
+ },
+ "side": {
+  "meaning": "The left or right part of something.",
+  "sentence": "Walk on this side of the street."
+ },
+ "sign": {
+  "meaning": "A board with words or pictures that tells you something.",
+  "sentence": "The sign says \"Stop\"."
+ },
+ "simple": {
+  "meaning": "Easy.",
+  "sentence": "This puzzle is very simple."
+ },
+ "sing": {
+  "meaning": "To make music with your voice.",
+  "sentence": "Let's sing a song."
+ },
+ "sister": {
+  "meaning": "A girl who has the same parents as you.",
+  "sentence": "My sister is ten years old."
+ },
+ "skateboard": {
+  "meaning": "A board with wheels that you ride standing up.",
+  "sentence": "He rides his skateboard in the park."
+ },
+ "sleep": {
+  "meaning": "To rest with your eyes closed at night.",
+  "sentence": "I sleep for nine hours."
+ },
+ "slow": {
+  "meaning": "Not fast.",
+  "sentence": "A snail is very slow."
+ },
+ "small": {
+  "meaning": "Little; not big.",
+  "sentence": "A mouse is a small animal."
+ },
+ "smell": {
+  "meaning": "What your nose notices.",
+  "sentence": "I love the smell of fresh bread."
+ },
+ "snake": {
+  "meaning": "A long animal with no legs.",
+  "sentence": "The snake is sleeping in the sun."
+ },
+ "snow": {
+  "meaning": "White frozen rain that falls in winter.",
+  "sentence": "Let's make a snowman in the snow."
+ },
+ "soap": {
+  "meaning": "Something you use with water to wash.",
+  "sentence": "Wash your hands with soap."
+ },
+ "some": {
+  "meaning": "A few; a little.",
+  "sentence": "Can I have some juice?"
+ },
+ "someone": {
+  "meaning": "A person.",
+  "sentence": "Someone is at the door."
+ },
+ "something": {
+  "meaning": "A thing.",
+  "sentence": "I have something for you."
+ },
+ "sometimes": {
+  "meaning": "Not always, but at times.",
+  "sentence": "Sometimes I walk to school."
+ },
+ "somewhere": {
+  "meaning": "In or to a place.",
+  "sentence": "I left my bag somewhere."
+ },
+ "song": {
+  "meaning": "Music with words that you sing.",
+  "sentence": "This is my favourite song."
+ },
+ "sorry": {
+  "meaning": "What you say when you feel bad about something you did.",
+  "sentence": "I'm sorry I'm late."
+ },
+ "sound": {
+  "meaning": "Something you hear.",
+  "sentence": "I heard a strange sound."
+ },
+ "soup": {
+  "meaning": "Hot liquid food.",
+  "sentence": "Grandma makes great chicken soup."
+ },
+ "south": {
+  "meaning": "The direction that is down on a map.",
+  "sentence": "Birds fly south in winter."
+ },
+ "space": {
+  "meaning": "The place where the stars and planets are; or an empty area.",
+  "sentence": "Astronauts travel into space."
+ },
+ "speak": {
+  "meaning": "To talk.",
+  "sentence": "Can you speak English?"
+ },
+ "special": {
+  "meaning": "Different and better than usual.",
+  "sentence": "Today is a special day."
+ },
+ "spoon": {
+  "meaning": "A tool for eating soup.",
+  "sentence": "Eat your soup with a spoon."
+ },
+ "sport": {
+  "meaning": "A game or activity like football or swimming.",
+  "sentence": "My favourite sport is tennis."
+ },
+ "spring": {
+  "meaning": "The season after winter, when flowers grow.",
+  "sentence": "Birds sing in spring."
+ },
+ "star": {
+  "meaning": "A bright light in the night sky.",
+  "sentence": "Look at that bright star!"
+ },
+ "start": {
+  "meaning": "To begin.",
+  "sentence": "The film starts at six."
+ },
+ "station": {
+  "meaning": "A place where trains or buses stop.",
+  "sentence": "We waited at the train station."
+ },
+ "stay": {
+  "meaning": "To not leave a place.",
+  "sentence": "Stay here, I'll come back."
+ },
+ "step": {
+  "meaning": "Moving your foot forward once; or a stair.",
+  "sentence": "Take one step forward."
+ },
+ "still": {
+  "meaning": "Not moving; or even now.",
+  "sentence": "Sit still, please."
+ },
+ "stomach ache": {
+  "meaning": "A pain in your tummy.",
+  "sentence": "I ate too many sweets and got a stomach ache."
+ },
+ "store": {
+  "meaning": "A shop.",
+  "sentence": "We bought a new TV at the store."
+ },
+ "story": {
+  "meaning": "Words that tell about things that happened.",
+  "sentence": "Tell me a story, please."
+ },
+ "street": {
+  "meaning": "A road in a town with houses.",
+  "sentence": "I live on a quiet street."
+ },
+ "strong": {
+  "meaning": "Having a lot of power.",
+  "sentence": "My dad is very strong."
+ },
+ "student": {
+  "meaning": "A person who studies at a school or university.",
+  "sentence": "She is a good student."
+ },
+ "study": {
+  "meaning": "To learn about something.",
+  "sentence": "I study English at school."
+ },
+ "subject": {
+  "meaning": "Something you learn at school, like maths or history.",
+  "sentence": "English is my favourite subject."
+ },
+ "sugar": {
+  "meaning": "Something sweet you put in tea or cakes.",
+  "sentence": "Don't put too much sugar in your tea."
+ },
+ "summer": {
+  "meaning": "The hottest season.",
+  "sentence": "We go to the sea in summer."
+ },
+ "Sunday": {
+  "meaning": "The day after Saturday.",
+  "sentence": "On Sunday we visit Grandma."
+ },
+ "swim": {
+  "meaning": "To move through water using your arms and legs.",
+  "sentence": "I can swim very fast."
+ },
+ "table": {
+  "meaning": "Furniture with a flat top and legs.",
+  "sentence": "Put the plates on the table."
+ },
+ "take": {
+  "meaning": "To get something with your hands.",
+  "sentence": "Take an apple from the bowl."
+ },
+ "tall": {
+  "meaning": "Higher than usual.",
+  "sentence": "The giraffe is a tall animal."
+ },
+ "teacher": {
+  "meaning": "A person who teaches at a school.",
+  "sentence": "Our teacher is very kind."
+ },
+ "television": {
+  "meaning": "A machine that shows programmes; a TV.",
+  "sentence": "We watched cartoons on television."
+ },
+ "tennis": {
+  "meaning": "A game where you hit a ball over a net with a racket.",
+  "sentence": "Let's play tennis."
+ },
+ "test": {
+  "meaning": "A set of questions to see what you know.",
+  "sentence": "We have a spelling test tomorrow."
+ },
+ "than": {
+  "meaning": "Used to compare two things.",
+  "sentence": "An elephant is bigger than a mouse."
+ },
+ "that": {
+  "meaning": "The one over there.",
+  "sentence": "Look at that dog!"
+ },
+ "their": {
+  "meaning": "Belonging to them.",
+  "sentence": "They are washing their car."
+ },
+ "them": {
+  "meaning": "Those people or things.",
+  "sentence": "I gave them my phone number."
+ },
+ "then": {
+  "meaning": "After that; at that time.",
+  "sentence": "Brush your teeth, then go to bed."
+ },
+ "there": {
+  "meaning": "In that place.",
+  "sentence": "Put the box over there."
+ },
+ "these": {
+  "meaning": "The ones here (more than one).",
+  "sentence": "These shoes are new."
+ },
+ "they": {
+  "meaning": "Those people or things.",
+  "sentence": "They are my friends."
+ },
+ "this": {
+  "meaning": "The one here.",
+  "sentence": "This is my bike."
+ },
+ "those": {
+  "meaning": "The ones over there (more than one).",
+  "sentence": "Those birds are very loud."
+ },
+ "three": {
+  "meaning": "The number after two.",
+  "sentence": "I have three pencils."
+ },
+ "Thursday": {
+  "meaning": "The day after Wednesday.",
+  "sentence": "We have art on Thursday."
+ },
+ "ticket": {
+  "meaning": "A piece of paper that lets you travel or go into a show.",
+  "sentence": "I bought a ticket for the train."
+ },
+ "time": {
+  "meaning": "What a clock shows.",
+  "sentence": "What time is it?"
+ },
+ "today": {
+  "meaning": "This day.",
+  "sentence": "Today is a sunny day."
+ },
+ "together": {
+  "meaning": "With each other.",
+  "sentence": "Let's do it together."
+ },
+ "tomato": {
+  "meaning": "A soft red fruit used in salads.",
+  "sentence": "Put a tomato in the salad."
+ },
+ "tomorrow": {
+  "meaning": "The day after today.",
+  "sentence": "See you tomorrow!"
+ },
+ "train": {
+  "meaning": "A long vehicle that goes on rails.",
+  "sentence": "We went to Kyiv by train."
+ },
+ "tree": {
+  "meaning": "A tall plant with a trunk, branches and leaves.",
+  "sentence": "The cat climbed up the tree."
+ },
+ "trousers": {
+  "meaning": "Clothes that cover each leg separately.",
+  "sentence": "He is wearing black trousers."
+ },
+ "turn": {
+  "meaning": "To move round; or a chance to do something.",
+  "sentence": "It's your turn to throw the dice."
+ },
+ "umbrella": {
+  "meaning": "A thing you hold over your head when it rains.",
+  "sentence": "Take your umbrella, it's raining."
+ },
+ "under": {
+  "meaning": "Below something.",
+  "sentence": "The cat is under the table."
+ },
+ "understand": {
+  "meaning": "To know what something means.",
+  "sentence": "I understand the question."
+ },
+ "usually": {
+  "meaning": "Most of the time.",
+  "sentence": "I usually go to bed at nine."
+ },
+ "very": {
+  "meaning": "Really; a lot.",
+  "sentence": "It is very cold today."
+ },
+ "walk": {
+  "meaning": "To move on your feet.",
+  "sentence": "I walk my dog every morning."
+ },
+ "wall": {
+  "meaning": "One of the sides of a room or building.",
+  "sentence": "There is a picture on the wall."
+ },
+ "want": {
+  "meaning": "To wish to have something.",
+  "sentence": "I want a new bike."
+ },
+ "warm": {
+  "meaning": "A little bit hot.",
+  "sentence": "The water is nice and warm."
+ },
+ "watch": {
+  "meaning": "To look at something for some time; or a small clock you wear.",
+  "sentence": "Let's watch a film."
+ },
+ "water": {
+  "meaning": "The clear liquid in rivers and the sea that we drink.",
+  "sentence": "Drink a glass of water."
+ },
+ "wear": {
+  "meaning": "To have clothes on your body.",
+  "sentence": "I wear a uniform to school."
+ },
+ "weather": {
+  "meaning": "If it is sunny, rainy or cold outside.",
+  "sentence": "The weather is lovely today."
+ },
+ "Wednesday": {
+  "meaning": "The day after Tuesday.",
+  "sentence": "We have swimming on Wednesday."
+ },
+ "week": {
+  "meaning": "Seven days.",
+  "sentence": "There are seven days in a week."
+ },
+ "what": {
+  "meaning": "A word for asking about a thing.",
+  "sentence": "What is your name?"
+ },
+ "when": {
+  "meaning": "A word for asking about time.",
+  "sentence": "When is your birthday?"
+ },
+ "where": {
+  "meaning": "A word for asking about a place.",
+  "sentence": "Where do you live?"
+ },
+ "which": {
+  "meaning": "A word for asking about one of a group.",
+  "sentence": "Which colour do you like?"
+ },
+ "wife": {
+  "meaning": "The woman a man is married to.",
+  "sentence": "He went to the cinema with his wife."
+ },
+ "window": {
+  "meaning": "Glass in a wall that lets light in.",
+  "sentence": "Open the window, it's hot."
+ },
+ "windy": {
+  "meaning": "With lots of wind.",
+  "sentence": "It's windy, hold on to your hat!"
+ },
+ "wish": {
+  "meaning": "To want something to happen.",
+  "sentence": "I wish I could fly."
+ },
+ "with": {
+  "meaning": "Together.",
+  "sentence": "I went to the park with my dog."
+ },
+ "without": {
+  "meaning": "Not having.",
+  "sentence": "I can't see without my glasses."
+ },
+ "woman": {
+  "meaning": "An adult female person.",
+  "sentence": "The woman is reading a newspaper."
+ },
+ "word": {
+  "meaning": "A group of letters that means something.",
+  "sentence": "Can you spell this word?"
+ },
+ "work": {
+  "meaning": "A job; or to do a job.",
+  "sentence": "My mum goes to work by bus."
+ },
+ "world": {
+  "meaning": "The Earth and everyone on it.",
+  "sentence": "I want to travel around the world."
+ },
+ "would": {
+  "meaning": "Used to ask politely or talk about wishes.",
+  "sentence": "Would you like some tea?"
+ },
+ "write": {
+  "meaning": "To make letters and words with a pen.",
+  "sentence": "Write your name at the top."
+ },
+ "wrong": {
+  "meaning": "Not correct.",
+  "sentence": "Sorry, that answer is wrong."
+ },
+ "year": {
+  "meaning": "Twelve months.",
+  "sentence": "I am ten years old this year."
+ },
+ "yellow": {
+  "meaning": "The colour of the sun and lemons.",
+  "sentence": "The banana is yellow."
+ },
+ "yesterday": {
+  "meaning": "The day before today.",
+  "sentence": "I went to the cinema yesterday."
+ },
+ "young": {
+  "meaning": "Not old.",
+  "sentence": "My cousin is very young."
+ },
+ "your": {
+  "meaning": "Belonging to you.",
+  "sentence": "Is this your bag?"
+ }
+}

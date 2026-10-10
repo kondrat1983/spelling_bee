@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Spelling Bee Trainer</title>
+  <meta name="description" content="Practise spelling aloud: the app says a word, you spell it, the app listens.">
+  <meta name="theme-color" content="#ffc93c">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="Spelling Bee">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-180.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main id="app">
+    <!-- Home -->
+    <section id="home" class="screen">
+      <header class="home-head">
+        <h1>🐝 Spelling Bee</h1>
+        <div class="stats">
+          <div class="progress-label"><span id="learned">0</span> / <span id="total">0</span> words learned</div>
+          <div class="bar"><div id="learned-bar" class="bar-fill"></div></div>
+          <div id="streak" class="streak"></div>
+        </div>
+      </header>
+
+      <p id="stt-note" class="note" hidden></p>
+
+      <h2>Choose a deck</h2>
+      <div id="decks" class="chips" role="radiogroup" aria-label="Deck"></div>
+
+      <h2>How do you answer?</h2>
+      <div id="input-modes" class="segmented" role="radiogroup" aria-label="Answer mode">
+        <button type="button" data-mode="voice">🎤 Voice</button>
+        <button type="button" data-mode="type">⌨️ Type</button>
+        <button type="button" data-mode="parent">🧑 Parent</button>
+      </div>
+
+      <div class="start-row">
+        <button id="start-practice" class="big primary" type="button">▶ Practice</button>
+        <button id="start-exam" class="big secondary" type="button">🏆 Exam</button>
+      </div>
+
+      <footer class="home-foot">
+        <button id="open-settings" type="button" class="link">⚙️ Settings</button>
+        <button id="open-parent" type="button" class="link">🔒 Parent</button>
+      </footer>
+    </section>
+
+    <!-- Play -->
+    <section id="play" class="screen" hidden>
+      <div class="topbar">
+        <button id="quit" type="button" class="icon" aria-label="Stop session">✖</button>
+        <div id="counter" class="counter">1 / 20</div>
+        <div id="timer" class="timer" hidden></div>
+        <div id="score" class="score">✅ 0</div>
+      </div>
+
+      <div id="card" class="card">
+        <div id="exam-badge" class="badge" hidden>🏆 Exam</div>
+        <div id="dots" class="dots" aria-hidden="true"></div>
+        <div id="status" class="status">Listen…</div>
+        <div id="hint-text" class="hint-text" hidden></div>
+
+        <!-- Voice -->
+        <div id="voice-ui" class="answer-ui">
+          <button id="mic" class="mic" type="button" aria-label="Tap and spell">🎤</button>
+          <div id="mic-label" class="mic-label">Tap, then say the word, spell it, say it again</div>
+          <button id="mic-done" type="button" class="small" hidden>Done ✔</button>
+        </div>
+
+        <!-- Type -->
+        <form id="type-ui" class="answer-ui" autocomplete="off" hidden>
+          <input id="type-input" type="text" inputmode="text" autocomplete="off" autocorrect="off" autocapitalize="none" spellcheck="false" enterkeyhint="done" aria-label="Type the spelling" placeholder="type the word">
+          <button id="type-check" type="submit" class="primary">Check</button>
+        </form>
+
+        <!-- Parent -->
+        <div id="parent-ui" class="answer-ui" hidden>
+          <div class="parent-word"><button id="peek" type="button" class="small">👁 Show word (parent)</button><span id="peek-word" hidden></span></div>
+          <div class="yesno">
+            <button id="parent-yes" type="button" class="big good">✅ Right</button>
+            <button id="parent-no" type="button" class="big bad">❌ Wrong</button>
+          </div>
+        </div>
+
+        <!-- Feedback -->
+        <div id="feedback" class="feedback" hidden>
+          <div id="fb-icon" class="fb-icon"></div>
+          <div id="fb-word" class="fb-word"></div>
+          <div id="fb-heard" class="fb-heard"></div>
+          <div id="fb-note" class="fb-note"></div>
+          <div id="fb-confirm" class="yesno" hidden>
+            <button id="confirm-yes" type="button" class="big good">✅ That's right</button>
+            <button id="confirm-no" type="button" class="big bad">❌ No</button>
+          </div>
+          <div id="fb-retry" class="row" hidden>
+            <button id="retry" type="button" class="secondary">🎤 Try again (didn't hear)</button>
+          </div>
+          <button id="next" type="button" class="big primary" hidden>Next ▶</button>
+        </div>
+      </div>
+
+      <div id="hints" class="hints">
+        <button id="h-repeat" type="button">🔊<span>Repeat</span></button>
+        <button id="h-slow" type="button">🐢<span>Slower</span></button>
+        <button id="h-sentence" type="button">📖<span>Sentence</span></button>
+        <button id="h-meaning" type="button">❓<span>Meaning</span></button>
+        <button id="h-skip" type="button">⏭<span>Skip</span></button>
+      </div>
+    </section>
+
+    <!-- End -->
+    <section id="end" class="screen" hidden>
+      <h1 id="end-title">Well done!</h1>
+      <div id="end-stars" class="stars"></div>
+      <p id="end-score" class="end-score"></p>
+      <div id="end-repeat-wrap">
+        <h2>Words to practise again</h2>
+        <ul id="end-repeat" class="word-list"></ul>
+      </div>
+      <div class="start-row">
+        <button id="again" type="button" class="big primary">🔁 Practise these</button>
+        <button id="home-btn" type="button" class="big secondary">🏠 Home</button>
+      </div>
+    </section>
+
+    <!-- Settings -->
+    <section id="settings" class="screen" hidden>
+      <div class="topbar"><button type="button" class="icon back" aria-label="Back">←</button><h1>Settings</h1><span></span></div>
+      <label class="field">Voice
+        <select id="set-voice"></select>
+      </label>
+      <button id="test-voice" type="button" class="secondary">🔊 Test voice</button>
+      <p id="voice-note" class="note small-note"></p>
+      <label class="field">Normal speed <output id="out-rate"></output>
+        <input id="set-rate" type="range" min="0.5" max="1.1" step="0.05">
+      </label>
+      <label class="field">Slow speed <output id="out-slow"></output>
+        <input id="set-slow" type="range" min="0.3" max="0.9" step="0.05">
+      </label>
+      <label class="field">Words per session
+        <select id="set-size"><option>10</option><option>15</option><option>20</option><option>30</option></select>
+      </label>
+      <label class="field check"><input id="set-dots" type="checkbox"> Show the number of letters as dots</label>
+      <label class="field">Exam timer
+        <select id="set-timer"><option value="0">Off</option><option value="30">30 s</option><option value="45">45 s</option><option value="60">60 s</option><option value="90">90 s</option></select>
+      </label>
+      <p class="note small-note">Tip: in a Spelling Bee you may say “double s” for “ss”.</p>
+    </section>
+
+    <!-- Parent -->
+    <section id="parent" class="screen" hidden>
+      <div class="topbar"><button type="button" class="icon back" aria-label="Back">←</button><h1>Parent</h1><span></span></div>
+      <form id="gate" class="gate">
+        <label for="gate-answer" id="gate-q"></label>
+        <input id="gate-answer" type="number" inputmode="numeric" autocomplete="off">
+        <button type="submit" class="primary">OK</button>
+      </form>
+      <div id="parent-body" hidden>
+        <div id="parent-summary" class="note"></div>
+
+        <h2>Hardest words</h2>
+        <ol id="hardest" class="word-list"></ol>
+
+        <h2>Word history</h2>
+        <input id="word-search" type="search" placeholder="type a word" autocomplete="off" autocapitalize="none" spellcheck="false">
+        <div id="word-history"></div>
+
+        <h2>Raw transcripts (last 100)</h2>
+        <p class="note small-note">What the speech engine heard. Use this to tune the letter map.</p>
+        <div id="transcripts" class="transcripts"></div>
+
+        <h2>Sync between devices</h2>
+        <div class="row wrap">
+          <button id="export" type="button" class="secondary">⬇️ Export progress</button>
+          <button id="copy-export" type="button" class="secondary">📋 Copy</button>
+          <label class="secondary file-btn">⬆️ Import<input id="import" type="file" accept="application/json,.json" hidden></label>
+        </div>
+        <p id="sync-msg" class="note small-note"></p>
+
+        <h2>Reset</h2>
+        <button id="reset" type="button" class="bad">🗑 Reset all progress</button>
+      </div>
+    </section>
+  </main>
+
+  <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>

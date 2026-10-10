@@ -1,0 +1,15 @@
+{
+  "name": "spelling-bee-trainer",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Spelling Bee practice: the app says a word, the child spells it aloud, the app listens and checks.",
+  "scripts": {
+    "start": "node scripts/serve.mjs",
+    "test": "node --test tests/*.test.js",
+    "test:e2e": "playwright test"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1"
+  }
+}
