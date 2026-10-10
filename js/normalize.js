@@ -36,6 +36,14 @@ for (const [letter, names] of Object.entries(LETTER_NAMES)) {
   for (const name of names) TOKEN_TO_LETTER[name] = letter;
 }
 
+// Tokens iOS writes when "S, E…" runs together ("Eve COMD", "Steve COMD" for s-e-c-o-n-d).
+// Each is tried as an extra reading; the best-scoring one wins.
+const TOKEN_VARIANTS = {
+  eve: ['e', 's e'],
+  steve: ['s e'],
+  essie: ['s e'],
+};
+
 // Number words the recogniser sometimes writes instead of letter names.
 const DIGITS = { '0': 'o', '8': 'h' };
 
@@ -43,7 +51,7 @@ const DIGITS = { '0': 'o', '8': 'h' };
 const FILLER = new Set(['um', 'umm', 'uh', 'er', 'erm', 'hmm', 'mm', 'the', 'letter', 'capital', 'small', 'then', 'comma', 'dash', 'hyphen']);
 
 // Confusable sounds: a difference only inside one of these groups asks for confirmation.
-const CONFUSABLE_GROUPS = ['bcdegptvz'];
+const CONFUSABLE_GROUPS = ['bcdegptvz', 'gj'];
 // M and N: the engine mixes them up so often that asking every time is annoying, and
 // a real M/N spelling mistake is almost unheard of. Treat them as the same letter.
 const SAME_SOUND = ['mn'];
@@ -133,6 +141,15 @@ function sameGroup(a, b) {
 export function compareLetters(heard, target) {
   const t = lettersOnly(target);
   const h = lettersOnly(heard);
+  const r = compareSameLength(h, t);
+  if (r !== 'wrong') return r;
+  // The first letter often merges with the word said before it ("second s…" -> "ETOMD").
+  // Never accept that silently, but ask.
+  if (t.length >= 5 && h.length === t.length - 1 && compareSameLength(h, t.slice(1)) !== 'wrong') return 'confirm';
+  return 'wrong';
+}
+
+function compareSameLength(h, t) {
   if (h === t) return 'correct';
   if (h.length !== t.length || h.length === 0) return 'wrong';
   let diffs = 0;
@@ -161,10 +178,33 @@ function editDistance(a, b) {
  * Score every recognition alternative; accept if any one matches.
  * Returns { result, heard, transcript, americanNote }.
  */
+/**
+ * Extra readings of one transcript: known run-together tokens ("Eve" -> "s e"),
+ * and a chunk repeated twice ("SECONG SECONG": spelled once, said once) read once.
+ */
+export function expandTranscript(transcript) {
+  const tokens = tokenize(transcript);
+  const out = new Set([String(transcript)]);
+  const swapAt = tokens.map((tok, i) => (TOKEN_VARIANTS[tok] ? i : -1)).filter((i) => i >= 0);
+  for (const i of swapAt) {
+    for (const v of TOKEN_VARIANTS[tokens[i]]) {
+      const copy = [...tokens];
+      copy[i] = v;
+      out.add(copy.join(' '));
+    }
+  }
+  if (swapAt.length > 1) {
+    out.add(tokens.map((tok) => (TOKEN_VARIANTS[tok] ? TOKEN_VARIANTS[tok][TOKEN_VARIANTS[tok].length - 1] : tok)).join(' '));
+  }
+  if (tokens.length >= 2 && tokens.every((tok) => tok === tokens[0]) && tokens[0].length > 1) out.add(tokens[0]);
+  return [...out];
+}
+
 export function scoreAlternatives(transcripts, target) {
   const t = lettersOnly(target);
   const scored = transcripts
     .filter((s) => s && String(s).trim())
+    .flatMap(expandTranscript)
     .map((transcript) => {
       const heard = transcriptToLetters(transcript, target);
       return { transcript, heard, result: compareLetters(heard, target) };

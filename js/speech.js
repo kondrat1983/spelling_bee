@@ -94,7 +94,7 @@ export const sttAvailable = !!Recognition;
  * If the engine ends on its own (iOS does this after a pause), it restarts and keeps the results.
  */
 export class Listener {
-  constructor({ silenceMs = 2600, firstSpeechMs = 9000, maxMs = 40000 } = {}) {
+  constructor({ silenceMs = 4000, firstSpeechMs = 10000, maxMs = 45000 } = {}) {
     this.opts = { silenceMs, firstSpeechMs, maxMs };
     this.rec = null;
     this.active = false;

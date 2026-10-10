@@ -142,3 +142,23 @@ test('align shows missing and extra letters', () => {
   assert.equal(alignLetters('Wednesday', 'wednesday').map((c) => c.t).join(''), 'Wednesday');
   assert.equal(alignLetters('Wednesday', 'wednesday').every((c) => c.ok), true);
 });
+
+// Real iPhone transcripts from the first day of practice.
+test('day-1 iPhone transcripts', () => {
+  const r = (c, w) => scoreAlternatives(c, w).result;
+  assert.equal(r(['SECONG SECONG'], 'second'), 'confirm');                 // spelled once + said once, D heard as G
+  assert.equal(r(['SECONG SECONG', 'SECOMG SECONG'], 'second'), 'confirm');
+  assert.equal(r(['Eve COMD', 'ECOMD', 'Steve COMD', 'Eve COMG'], 'second'), 'correct'); // "Eve"/"Steve" = s-e
+  assert.equal(r(['ETOMD'], 'second'), 'confirm');                         // first letter lost, C heard as T
+  assert.equal(r(['EMOUJH'], 'enough'), 'confirm');                        // G heard as J
+  assert.equal(r(['ENO UGH', 'EMO UGH'], 'enough'), 'correct');
+  assert.equal(r(['W EEK'], 'week'), 'correct');
+  assert.equal(r(['WAIT'], 'week'), 'wrong');
+  assert.equal(r(['ANGOOOO', 'ANGOOOOO', 'ANGOROOO', 'ANGOOO'], 'kangaroo'), 'wrong');
+});
+
+test('a missing first letter is only ever "confirm", never "correct"', () => {
+  assert.equal(compareLetters('cond', 'second'), 'wrong');
+  assert.equal(compareLetters('econd', 'second'), 'confirm');
+  assert.equal(compareLetters('ree', 'tree'), 'wrong'); // too short to guess
+});

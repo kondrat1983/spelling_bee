@@ -427,7 +427,7 @@ function stopTimer() {
 function setListening(on) {
   $('mic').classList.toggle('listening', on);
   $('mic').setAttribute('aria-label', on ? 'Stop listening' : 'Tap and spell');
-  if (on) $('mic-label').textContent = 'Listening… tap when you finish';
+  if (on) $('mic-label').textContent = 'Say the word · pause · spell it · say it again';
 }
 
 function startListening({ auto = false } = {}) {
@@ -500,7 +500,8 @@ function handleVoice(candidates) {
     hideAnswerUI();
     bee('play-bee', 'think');
     $('status').textContent = 'Did you say…';
-    showFeedback({ icon: '👂', compare: { target: word, heard: r.heard, showWord: false }, youLabel: 'I heard', confirm: true });
+    // Show the reading in the child's favour (the letters only differ in sounds that are easy to mishear).
+    showFeedback({ icon: '👂', compare: { target: word, heard: lettersOnly(word), showWord: false }, youLabel: 'I think I heard', confirm: true });
     session.pendingConfirm = r;
     return;
   }
