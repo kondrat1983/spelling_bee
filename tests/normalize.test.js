@@ -61,13 +61,22 @@ test('exact match is correct', () => {
 
 test('E-set and M/N differences ask for confirmation', () => {
   assert.equal(compareLetters('enoughd', 'enough'), 'wrong');
-  assert.equal(compareLetters('emough', 'enough'), 'confirm');
   assert.equal(compareLetters('bood', 'book'), 'wrong'); // k is not in the E-set
   assert.equal(compareLetters('tree', 'tree'), 'correct');
   assert.equal(compareLetters('dree', 'tree'), 'confirm');
   assert.equal(compareLetters('lisard', 'lizard'), 'wrong');
   assert.equal(compareLetters('livard', 'lizard'), 'confirm');
   assert.equal(compareLetters('scissorb', 'scissors'), 'wrong');
+});
+
+test('M and N count as the same letter', () => {
+  assert.equal(compareLetters('emough', 'enough'), 'correct');
+  assert.equal(compareLetters('nonkey', 'monkey'), 'correct');
+  assert.equal(compareLetters('enviromnemt', 'environment'), 'correct');
+  assert.equal(compareLetters('emoubh', 'enough'), 'confirm'); // M/N plus an E-set letter
+  assert.equal(compareLetters('enviroment', 'environment'), 'wrong'); // a missing letter is still wrong
+  assert.equal(scoreAlternatives(['e em o u g h'], 'enough').result, 'correct');
+  assert.equal(transcriptToLetters('m o end k e y', 'monkey'), 'monkey');
 });
 
 test('real mistakes are wrong', () => {

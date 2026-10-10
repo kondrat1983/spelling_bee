@@ -16,7 +16,7 @@ const LETTER_NAMES = {
   k: ['k', 'kay', 'okay', 'ok', 'cay', 'kaye'],
   l: ['l', 'el', 'ell', 'elle', 'al'],
   m: ['m', 'em', 'emm', 'am'],
-  n: ['n', 'en', 'and', 'in', 'an'],
+  n: ['n', 'en', 'and', 'in', 'an', 'end', 'hen', 'ann', 'anne', 'inn'],
   o: ['o', 'oh', 'owe', 'ow', 'ooh', 'zero'],
   p: ['p', 'pee', 'pea', 'pe', 'pi', 'pie'],
   q: ['q', 'queue', 'cue', 'kyu', 'kew', 'que'],
@@ -43,7 +43,10 @@ const DIGITS = { '0': 'o', '8': 'h' };
 const FILLER = new Set(['um', 'umm', 'uh', 'er', 'erm', 'hmm', 'mm', 'the', 'letter', 'capital', 'small', 'then', 'comma', 'dash', 'hyphen']);
 
 // Confusable sounds: a difference only inside one of these groups asks for confirmation.
-const CONFUSABLE_GROUPS = ['bcdegptvz', 'mn'];
+const CONFUSABLE_GROUPS = ['bcdegptvz'];
+// M and N: the engine mixes them up so often that asking every time is annoying, and
+// a real M/N spelling mistake is almost unheard of. Treat them as the same letter.
+const SAME_SOUND = ['mn'];
 // How many confusable positions may differ before we call it a real mistake.
 const MAX_CONFUSABLE = 2;
 
@@ -135,9 +138,11 @@ export function compareLetters(heard, target) {
   let diffs = 0;
   for (let i = 0; i < t.length; i++) {
     if (h[i] === t[i]) continue;
+    if (SAME_SOUND.some((g) => g.includes(h[i]) && g.includes(t[i]))) continue;
     if (!sameGroup(h[i], t[i])) return 'wrong';
     diffs++;
   }
+  if (diffs === 0) return 'correct';
   return diffs <= MAX_CONFUSABLE ? 'confirm' : 'wrong';
 }
 
