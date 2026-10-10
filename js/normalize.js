@@ -75,7 +75,7 @@ function toLetter(tok) {
  * "ess see eye double ess oh are ess" -> "scissors".
  * `target` is used to drop the whole word said before and after the spelling.
  */
-export function transcriptToLetters(transcript, target = '') {
+export function transcriptToLetters(transcript, target = '', { live = false } = {}) {
   let tokens = tokenize(transcript);
   const targetTokens = tokenize(target);
   const targetCompact = lettersOnly(target);
@@ -92,7 +92,8 @@ export function transcriptToLetters(transcript, target = '') {
   let out = '';
   for (let i = 0; i < tokens.length; i++) {
     const tok = tokens[i];
-    if (tok === targetCompact) { out += tok; continue; }
+    // Live preview must never reveal the spelling: skip the word itself and whole-word chunks.
+    if (tok === targetCompact) { if (!live) out += tok; continue; }
     if (FILLER.has(tok)) continue;
     // "space" separates two-word entries; spaces are ignored when comparing.
     if (tok === 'space') continue;
@@ -113,7 +114,7 @@ export function transcriptToLetters(transcript, target = '') {
     const letter = toLetter(tok);
     if (letter) { out += letter; continue; }
     // A fully spelled chunk ("nough") or a word: take its letters as written.
-    out += tok.replace(/[^a-z]/g, '');
+    if (!live) out += tok.replace(/[^a-z]/g, '');
   }
   return out;
 }
@@ -215,5 +216,52 @@ export function diffTarget(target, heard) {
     const last = out.map((x, idx) => (/[a-z]/i.test(x.ch) ? idx : -1)).filter((x) => x >= 0).pop();
     out[last].ok = false;
   }
+  return out;
+}
+
+/**
+ * Align what was heard with the target, column by column, for the two-row
+ * "you / correct" display. Each column is {t, h}: t = target letter (null if the
+ * child added an extra letter), h = heard letter (null if missing), gap = word space.
+ */
+export function alignLetters(target, heard) {
+  const t = lettersOnly(target);
+  const h = lettersOnly(heard);
+  const n = t.length, m = h.length;
+  const dp = Array.from({ length: n + 1 }, () => new Array(m + 1).fill(0));
+  for (let i = 0; i <= n; i++) dp[i][0] = i;
+  for (let j = 0; j <= m; j++) dp[0][j] = j;
+  for (let i = 1; i <= n; i++) {
+    for (let j = 1; j <= m; j++) {
+      dp[i][j] = Math.min(dp[i - 1][j] + 1, dp[i][j - 1] + 1, dp[i - 1][j - 1] + (t[i - 1] === h[j - 1] ? 0 : 1));
+    }
+  }
+  // Show the target with its own capitals ("Wednesday"); compare in lower case.
+  const shown = [...String(target)].filter((ch) => /[a-z]/i.test(ch));
+  const cols = [];
+  let i = n, j = m;
+  while (i > 0 || j > 0) {
+    if (i > 0 && j > 0 && dp[i][j] === dp[i - 1][j - 1] + (t[i - 1] === h[j - 1] ? 0 : 1)) {
+      cols.push({ t: t[i - 1], h: h[j - 1], ti: i - 1 }); i--; j--;
+    } else if (i > 0 && dp[i][j] === dp[i - 1][j] + 1) {
+      cols.push({ t: t[i - 1], h: null, ti: i - 1 }); i--;
+    } else {
+      cols.push({ t: null, h: h[j - 1], ti: i - 1 }); j--;
+    }
+  }
+  cols.reverse();
+  // Put the word spaces of two-word entries back ("ice cream").
+  const spaceAfter = new Set();
+  let k = -1;
+  for (const ch of String(target)) {
+    if (/[a-z]/i.test(ch)) k++;
+    else if (ch === ' ') spaceAfter.add(k);
+  }
+  const out = [];
+  cols.forEach((c, idx) => {
+    out.push({ t: c.t === null ? null : shown[c.ti], h: c.h, ok: c.t !== null && c.t === c.h });
+    const next = cols[idx + 1];
+    if (c.t !== null && spaceAfter.has(c.ti) && !(next && next.t === null)) out.push({ gap: true });
+  });
   return out;
 }

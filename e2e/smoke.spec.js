@@ -1,8 +1,8 @@
 import { test, expect } from '@playwright/test';
 
 // Speech is not available in CI: make speechSynthesis finish instantly.
-async function stubSpeech(page) {
-  await page.addInitScript(() => {
+async function stubSpeech(page, settings = { inputMode: 'type', sessionSize: 5, onboarded: true }) {
+  await page.addInitScript((s) => {
     const fake = {
       speak(u) { setTimeout(() => u.onend && u.onend(), 5); },
       cancel() {},
@@ -10,20 +10,56 @@ async function stubSpeech(page) {
       addEventListener() {},
     };
     Object.defineProperty(window, 'speechSynthesis', { value: fake, configurable: true });
-    if (!localStorage.getItem('sbt.settings.v1')) {
-      localStorage.setItem('sbt.settings.v1', JSON.stringify({ inputMode: 'type', sessionSize: 5 }));
+    if (s && !localStorage.getItem('sbt.settings.v1')) localStorage.setItem('sbt.settings.v1', JSON.stringify(s));
+  }, settings);
+}
+
+// Fake speech recognition: answers once per word with window.__say(word).
+async function stubRecognition(page) {
+  await page.addInitScript(() => {
+    class FakeRecognition {
+      start() {
+        const word = document.getElementById('peek-word').textContent;
+        if (window.__spoken === word) { setTimeout(() => this.onend?.(), 200); return; }
+        window.__spoken = word;
+        const alts = window.__say(word);
+        setTimeout(() => {
+          const result = alts.map((t) => ({ transcript: t, confidence: 0.9 }));
+          result.isFinal = true;
+          this.onresult?.({ results: [result] });
+        }, 20);
+        // iOS-style: the engine stops by itself after a pause; the app must restart and keep the result.
+        setTimeout(() => this.onend?.(), 60);
+      }
+      stop() { setTimeout(() => this.onend?.(), 5); }
+      abort() { this.onend?.(); }
     }
+    window.webkitSpeechRecognition = FakeRecognition;
+    window.SpeechRecognition = FakeRecognition;
+    window.__say = (w) => [`${w} ${[...w.replace(/ /g, '')].join(' ')} ${w}`];
   });
 }
 
 const progress = (page) => page.evaluate(() => JSON.parse(localStorage.getItem('sbt.progress.v1')));
 
+test('first launch shows the tutorial, then home', async ({ page }) => {
+  await stubSpeech(page, null);
+  await page.goto('/');
+  await expect(page.locator('#onboarding')).toBeVisible();
+  await page.click('#onb-next');
+  await expect(page.locator('.ritual')).toBeVisible();
+  await page.click('#onb-next');
+  await page.click('#onb-next');
+  await expect(page.locator('#home')).toBeVisible();
+  await page.reload();
+  await expect(page.locator('#home')).toBeVisible();
+});
+
 test('Type mode: a 5-word session, mistakes go to box 1, progress is saved', async ({ page }) => {
   await stubSpeech(page);
   await page.goto('/');
   await expect(page.locator('#total')).toHaveText('482');
-  await expect(page.locator('[data-deck="focus"]')).toHaveAttribute('aria-checked', 'true');
-  await expect(page.locator('[data-mode="type"]')).toHaveAttribute('aria-checked', 'true');
+  await expect(page.locator('#start-sub')).toContainText('Focus');
 
   await page.click('#start-practice');
   await expect(page.locator('#play')).toBeVisible();
@@ -43,7 +79,8 @@ test('Type mode: a 5-word session, mistakes go to box 1, progress is saved', asy
     if (makeMistake) {
       wrongWord = word;
       await expect(page.locator('#fb-icon')).toHaveText('❌');
-      await expect(page.locator('#fb-word')).toContainText(word.replace(' ', ' '));
+      await expect(page.locator('#fb-word')).toHaveText(word.replace(/ /g, ''));
+      await expect(page.locator('#fb-you .tile.miss')).toHaveCount(1); // the extra "x"
     } else {
       await expect(page.locator('#fb-icon')).toHaveText('✅');
     }
@@ -52,7 +89,7 @@ test('Type mode: a 5-word session, mistakes go to box 1, progress is saved', asy
 
   await expect(page.locator('#end')).toBeVisible();
   await expect(page.locator('#end-score')).toHaveText('4 of 5 right the first time');
-  await expect(page.locator('#end-repeat li')).toHaveText([wrongWord]);
+  await expect(page.locator('#end-repeat .word-card')).toHaveText([wrongWord]);
   // The missed word came back once in the session.
   expect(answered.filter((w) => w === wrongWord)).toHaveLength(2);
   expect(answered).toHaveLength(6);
@@ -62,18 +99,33 @@ test('Type mode: a 5-word session, mistakes go to box 1, progress is saved', asy
   expect(p.words[wrongWord].wrong).toBe(1);
   for (const w of answered.filter((x) => x !== wrongWord)) expect(p.words[w].box).toBe(2);
 
-  // Progress survives a reload.
+  // Progress survives a reload, and the mistake shows up in the Mistakes deck.
   await page.reload();
   p = await progress(page);
   expect(p.words[wrongWord].box).toBe(1);
   expect(Object.keys(p.words)).toHaveLength(5);
-  await expect(page.locator('[data-deck="mistakes"] small')).toHaveText('0/1');
+  await page.click('#open-decks');
+  await expect(page.locator('[data-deck="mistakes"] small')).toHaveText('0 / 1');
+});
+
+test('Choose words: picking a deck changes the Start button', async ({ page }) => {
+  await stubSpeech(page);
+  await page.goto('/');
+  await page.click('#open-decks');
+  await page.click('[data-deck="range-ab"]');
+  await expect(page.locator('#home')).toBeVisible();
+  await expect(page.locator('#start-sub')).toContainText('A–B');
+  await page.click('#start-practice');
+  const word = await page.locator('#peek-word').textContent();
+  expect(word[0].toLowerCase()).toMatch(/[ab]/);
 });
 
 test('Parent mode and parent screen', async ({ page }) => {
   await stubSpeech(page);
   await page.goto('/');
+  await page.click('#open-settings');
   await page.click('[data-mode="parent"]');
+  await page.click('#settings .back');
   await page.click('#start-practice');
   await page.click('#parent-no');
   await expect(page.locator('#fb-icon')).toHaveText('❌');
@@ -90,61 +142,35 @@ test('Parent mode and parent screen', async ({ page }) => {
   await expect(page.locator('#hardest li')).toHaveCount(1);
 });
 
-// Fake speech recognition: answers with whatever window.__say(word) returns.
-async function stubRecognition(page) {
-  await page.addInitScript(() => {
-    class FakeRecognition {
-      start() {
-        const word = document.getElementById('peek-word').textContent;
-        const alts = window.__say(word);
-        if (window.__spoken) { setTimeout(() => this.onend?.(), 200); return; }
-        window.__spoken = true;
-        setTimeout(() => {
-          const result = alts.map((t) => ({ transcript: t, confidence: 0.9 }));
-          result.isFinal = true;
-          this.onresult?.({ results: [result] });
-        }, 20);
-        // iOS-style: the engine stops by itself after a pause; the app must restart and keep the result.
-        setTimeout(() => this.onend?.(), 60);
-      }
-      stop() { setTimeout(() => this.onend?.(), 5); }
-      abort() { this.onend?.(); }
-    }
-    window.webkitSpeechRecognition = FakeRecognition;
-    window.SpeechRecognition = FakeRecognition;
-    window.__say = (w) => [`${w} ${[...w.replace(/ /g, '')].join(' ')} ${w}`];
-  });
-}
-
-test('Voice mode: spelled letters are recognised; E-set confusion asks to confirm', async ({ page }) => {
-  await stubSpeech(page);
+test('Voice mode: the mic starts by itself; E-set confusion asks to confirm', async ({ page }) => {
+  await stubSpeech(page, { inputMode: 'voice', sessionSize: 5, onboarded: true });
   await stubRecognition(page);
   await page.goto('/');
-  await page.click('[data-mode="voice"]');
   await page.click('#start-practice');
 
-  await page.evaluate(() => { window.__spoken = false; });
-  await page.click('#mic');
+  // No tap needed: the word is spoken, then the app listens.
   await expect(page.locator('#fb-icon')).toHaveText('✅', { timeout: 8000 });
-  await page.click('#next');
+  await expect(page.locator('#combo')).toHaveText('');
 
-  // Swap the last letter for an E-set neighbour that differs ("t" for "d", etc.).
+  // Swap one letter for an E-set neighbour.
   await page.evaluate(() => {
     window.__say = (w) => {
       const letters = [...w.replace(/ /g, '').toLowerCase()];
       const i = letters.findIndex((c) => 'bdegptvz'.includes(c));
-      letters[i] = letters[i] === 'b' ? 'p' : 'b';
+      if (i >= 0) letters[i] = letters[i] === 'b' ? 'p' : 'b';
       return [letters.join(' ')];
     };
-    window.__spoken = false;
   });
+  await page.click('#next');
   const word = await page.locator('#peek-word').textContent();
-  await page.click('#mic');
   if (/[bdegptvz]/i.test(word)) {
     await expect(page.locator('#fb-confirm')).toBeVisible({ timeout: 8000 });
+    // The question shows only what was heard, never the answer.
+    await expect(page.locator('#fb-word')).toBeHidden();
     await page.click('#confirm-yes');
     await expect(page.locator('#fb-icon')).toHaveText('✅');
+    await expect(page.locator('#combo')).toHaveText('🔥 2');
   }
-  const p = await page.evaluate(() => JSON.parse(localStorage.getItem('sbt.progress.v1')));
-  expect(p.transcripts.length).toBeGreaterThanOrEqual(2);
+  const p = await progress(page);
+  expect(p.transcripts.length).toBeGreaterThanOrEqual(1);
 });

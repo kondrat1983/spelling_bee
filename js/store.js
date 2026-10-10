@@ -14,6 +14,10 @@ export const DEFAULT_SETTINGS = {
   sessionSize: 20,
   showDots: false,
   examTimer: 0, // seconds per word, 0 = off
+  autoListen: true, // start the mic by itself after the word is spoken
+  sounds: true,
+  onboarded: false,
+  deckId: '', // '' = smart pick
 };
 
 function read(key) {

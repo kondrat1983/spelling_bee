@@ -1,6 +1,6 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { transcriptToLetters, compareLetters, scoreAlternatives, scoreTyped, diffTarget } from '../js/normalize.js';
+import { transcriptToLetters, compareLetters, scoreAlternatives, scoreTyped, diffTarget, alignLetters } from '../js/normalize.js';
 
 // [transcript, target, expected letters]
 const CASES = [
@@ -114,4 +114,22 @@ test('diff marks missed letters', () => {
   assert.equal(mark('enough', 'enoughh'), 'enougH');
   assert.equal(mark('ice cream', 'icecrem'), 'ice creAm');
   assert.equal(mark('tree', 'tree'), 'tree');
+});
+
+test('live preview never shows the word or whole-word chunks', () => {
+  const live = (tr, w) => transcriptToLetters(tr, w, { live: true });
+  assert.equal(live('restaurant', 'restaurant'), '');
+  assert.equal(live('restaurant r e s', 'restaurant'), 'res');
+  assert.equal(live('enough e nough', 'enough'), 'e');
+  assert.equal(live('s c i double s', 'scissors'), 'sciss');
+});
+
+test('align shows missing and extra letters', () => {
+  const show = (t, h) => alignLetters(t, h).map((c) => (c.gap ? '_' : `${c.t ?? '-'}${c.h ?? '-'}`)).join(' ');
+  assert.equal(show('enough', 'enuf'), 'ee nn o- uu g- hf');
+  assert.equal(show('book', 'boook'), 'bb -o oo oo kk');
+  assert.equal(show('ice cream', 'icecream'), 'ii cc ee _ cc rr ee aa mm');
+  assert.equal(alignLetters('tree', 'tree').every((c) => c.ok), true);
+  assert.equal(alignLetters('Wednesday', 'wednesday').map((c) => c.t).join(''), 'Wednesday');
+  assert.equal(alignLetters('Wednesday', 'wednesday').every((c) => c.ok), true);
 });

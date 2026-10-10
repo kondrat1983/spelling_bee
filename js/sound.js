@@ -27,17 +27,21 @@ function tone(freq, start, dur, type = 'sine', vol = 0.18) {
 }
 
 export const sound = {
+  enabled: true,
   /** Call from a tap: iOS only allows audio after a user gesture. */
   unlock() {
     try { context()?.resume(); } catch { /* ignore */ }
   },
   good() {
+    if (!this.enabled) return;
     try { tone(660, 0, 0.12); tone(880, 0.1, 0.18); } catch { /* ignore */ }
   },
   bad() {
+    if (!this.enabled) return;
     try { tone(220, 0, 0.25, 'triangle', 0.15); } catch { /* ignore */ }
   },
   fanfare() {
+    if (!this.enabled) return;
     try { [523, 659, 784, 1047].forEach((f, i) => tone(f, i * 0.12, 0.2)); } catch { /* ignore */ }
   },
 };

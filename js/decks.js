@@ -17,12 +17,12 @@ export function buildDecks(data, progress) {
     return s.wrong > 0 && s.box < 5;
   });
   const decks = [
-    { id: 'focus', name: '⭐ Focus', words: focus },
-    { id: 'mistakes', name: '🔁 Mistakes', words: mistakes },
-    { id: 'all', name: '📚 All words', words: all },
+    { id: 'focus', name: '⭐ Focus', hint: 'The circled words', words: focus },
+    { id: 'mistakes', name: '🔁 Mistakes', hint: 'Words you got wrong before', words: mistakes },
+    { id: 'all', name: '📚 All words', hint: 'The whole list', words: all },
   ];
   for (const [name, letters] of RANGES) {
-    decks.push({ id: `range-${letters}`, name, words: all.filter((w) => letters.includes(w[0].toLowerCase())) });
+    decks.push({ id: `range-${letters}`, name: `🔤 ${name}`, hint: `Words starting with ${name}`, words: all.filter((w) => letters.includes(w[0].toLowerCase())) });
   }
   return decks;
 }

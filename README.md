@@ -13,10 +13,13 @@ No accounts, no server, no ads. Progress stays on the device (`localStorage`); e
 
 Open the GitHub Pages link in **Safari on iPhone/iPad** (or Chrome on a Mac), allow the microphone, and *Share → Add to Home Screen* to install it.
 
-- **🎤 Voice**: tap the mic, say–spell–say. It stops by itself after a short silence, or tap *Done*.
-  If it misheard a letter that sounds alike (B/D/E/G/P/T/V/Z, M/N) it asks *“I heard e-n-o-u-g-h?”*. If it marks a right answer wrong, tap **🙉 It misheard me**: the mistake is not counted.
+- First launch: a short tutorial with Buzz the bee (say → spell → say, “double s”, a microphone test). *Settings → Show the tutorial again*.
+- Home: one big **▶ Start** (smart pick: Focus words first, then everything), **📚 Choose words** for a specific deck, **🏆 Exam**.
+- **🎤 Voice**: after the word is spoken the mic starts by itself (can be turned off in Settings); letters appear as tiles while the child spells. It stops after a short silence, or tap the mic.
+  If it misheard a letter that sounds alike (B/D/E/G/P/T/V/Z, M/N) it asks *“I heard e-n-o-u-g-h?”*. A wrong answer shows two aligned rows, *I heard* and *Correct*, with the wrong letters in red, then spells the word slowly. If the app misheard a right answer, tap **🙉 Misheard me**: the mistake is not counted.
   “double s” works for “ss”, “zed”/“zee” for Z.
 - **⌨️ Type**: type instead of speaking (noisy room, or no speech recognition).
+- Answer mode (Voice / Type / Parent) is in Settings.
 - **🧑 Parent**: the app says the word, the child spells to a parent who taps ✅/❌ (👁 shows the word to the parent).
 - Buttons: 🔊 Repeat · 🐢 Slower · 📖 Sentence · ❓ Meaning · ⏭ Skip.
 - **Decks**: ⭐ Focus (the circled words, starts first), 🔁 Mistakes, All, letter ranges. 20 words per session (Settings).
@@ -43,6 +46,7 @@ Plain HTML/CSS/ES modules, no build step. Main files:
 - `js/normalize.js`: transcript → letters (`"ess see eye double ess oh are ess"` → `scissors`), compare, diff. Letter map at the top.
 - `js/speech.js`: `speechSynthesis` (prefers en-GB Daniel/Serena/Kate) and `SpeechRecognition` (`en-GB`, 5 alternatives, keeps listening through pauses).
 - `js/decks.js`, `js/store.js`: decks, Leitner, progress, export/import.
+- `js/bee.js`: the bee mascot (one SVG, moods via CSS).
 - `sw.js`: offline cache (bump `CACHE` after big changes).
 
 ## Publish (GitHub Pages)
